@@ -2,10 +2,11 @@ const correct = ['A', 'A', 'B', 'C'];
 
 const form = document.querySelector('.quiz-form');
 const reveal = document.querySelector('.user-score');
-let score = 0;
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+    let score = 0;
     let userScore = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
     userScore.forEach((answers, index) => {
         if (answers === correct[index]) {
